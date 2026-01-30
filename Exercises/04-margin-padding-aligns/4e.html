@@ -1,0 +1,58 @@
+<style>
+  /* Prevent layout shift */
+  .apply-button,
+  .save-button {
+    box-sizing: border-box;
+  }
+
+  .apply-button {
+    background-color: rgb(10,102,194);
+    color: white;
+    border: 2px solid transparent;   /* reserve space */
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.15s;
+  }
+
+  .apply-button:hover {
+    background-color: rgb(8, 82, 156);
+  }
+
+  .apply-button:active {
+    border-color: white;
+  }
+
+  .save-button {
+    background-color: white;
+    color: rgb(10,102,194);
+    border: 2px solid rgb(10,102,194);   /* normal border */
+    padding: 11px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 15px;
+    transition: background-color 0.15s;
+    outline: 0;
+  }
+
+  /* Hover effect */
+  .save-button:hover {
+    background-color: rgb(195, 221, 247);
+  }
+
+  /* Active: border looks thicker WITHOUT layout shift */
+  .save-button:active {
+    outline: 3px solid rgb(10,102,194);
+    outline-offset: -3px;   /* stays inside */
+  }
+</style>
+
+<button class="apply-button">
+  Apply on company website
+</button>
+
+<button class="save-button">
+  Save
+</button>
